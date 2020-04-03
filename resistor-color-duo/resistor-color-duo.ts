@@ -21,9 +21,9 @@ export class ResistorColor {
   }
   value = (): number => {
     const [colour1, colour2] = this.colors.slice(0, 2);
-    const colour1Index = this.colourMapping.indexOf(colour1);
-    const colour2Index = this.colourMapping.indexOf(colour2);
+    const colour1Index = this.colourMapping.indexOf(colour1).toString();
+    const colour2Index = this.colourMapping.indexOf(colour2).toString();
 
-    return parseInt(colour1Index.toString() + colour2Index.toString());
+    return parseInt(colour1Index + colour2Index);
   };
 }
